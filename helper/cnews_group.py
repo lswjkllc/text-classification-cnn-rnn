@@ -18,9 +18,9 @@ def save_file(dirname):
     dirname: 原数据目录
     文件内容格式:  类别\t内容
     """
-    f_train = open('data/cnews/cnews.train.txt', 'w', encoding='utf-8')
-    f_test = open('data/cnews/cnews.test.txt', 'w', encoding='utf-8')
-    f_val = open('data/cnews/cnews.val.txt', 'w', encoding='utf-8')
+    f_train = open('../data/cnews/cnews.train.txt', 'w', encoding='utf-8')
+    f_test = open('../data/cnews/cnews.test.txt', 'w', encoding='utf-8')
+    f_val = open('../data/cnews/cnews.val.txt', 'w', encoding='utf-8')
     for category in os.listdir(dirname):   # 分类目录
         cat_dir = os.path.join(dirname, category)
         if not os.path.isdir(cat_dir):
@@ -46,7 +46,7 @@ def save_file(dirname):
 
 
 if __name__ == '__main__':
-    save_file('data/thucnews')
-    print(len(open('data/cnews/cnews.train.txt', 'r', encoding='utf-8').readlines()))
-    print(len(open('data/cnews/cnews.test.txt', 'r', encoding='utf-8').readlines()))
-    print(len(open('data/cnews/cnews.val.txt', 'r', encoding='utf-8').readlines()))
+    save_file('../data/thucnews')
+    print(len(open('../data/cnews/cnews.train.txt', 'r', encoding='utf-8').readlines()))
+    print(len(open('../data/cnews/cnews.test.txt', 'r', encoding='utf-8').readlines()))
+    print(len(open('../data/cnews/cnews.val.txt', 'r', encoding='utf-8').readlines()))
