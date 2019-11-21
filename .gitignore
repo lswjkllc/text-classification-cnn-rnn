@@ -1,6 +1,5 @@
 .DS_Store
-data/cnews
-data/thucnews
+data/
 __pycache__
 cnn_keras.py
 .idea
